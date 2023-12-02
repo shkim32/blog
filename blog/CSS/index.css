@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 게시판 헤드 list_head
+로그인, 회원가입, 로그아웃, 정보수정 a 테그 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ecd5e3;
+    padding: 15px;
+}
+
+header h1 a {
+    display: inline-block;
+    vertical-align: middle;
+    color: rgb(73, 73, 73);
+    margin: 10px;
+    padding: 0;
+    text-decoration: none;
+}
+
+#list_hdnav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#list_hdnav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.hd_bt, #log_ph {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(73, 73, 73);
+}
+
+.hd_bt:hover {
+    color: black;
+    background-color: #cbaacb;
+}
+
+/**/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    float: left;
+    margin: 0 0 2em;
+}
+
+
+/* 게시판 목록 ( list ) */
+#list_tb th {
+    /* display: flex;
+    flex-direction: row; */
+    font-size: 1.2em;
+    text-align: left;
+}
+
+#list_tb tr {
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+}
+
+.list_article {
+    padding: 0.5em 0 .5em;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.25em;
+    }
+
+#li_title {
+    padding: 0.5em 0 .5em;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.25em;
+    overflow: hidden;
+    max-width: 1000px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* 선택한 게시글 */
+
+#posting_tb{
+    margin: 30px 10px 0 10px;
+}
+
+#posting_tb th, #posting_tb td {
+    border: 2px solid #ddd;
+    padding-left: 15px;
+}
+
+#posting_tb th {
+    font-size: 1.5em;
+    text-align: left;
+}
+
+
+
+/* 버튼 
+.btn-10 {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.btn-10:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+}
+.btn-10:hover {
+    color: #fff;
+}
+.btn-10:hover:after {
+    background: #000;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+} */
+
+/* 목차- 내용 */
