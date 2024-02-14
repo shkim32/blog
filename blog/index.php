@@ -24,7 +24,7 @@ session_start();
 // 선택한 게시물 보기
     $posting= '';
     if(!isset($_GET['id'])){
-        $posting = "<h3>안녕하세요</h3> 여기는 게시판입니다.";
+        $posting = "<h3>안녕하세요 여기는 게시판입니다.</h3>";
     }else{
         $filtered_id = mysqli_real_escape_string($conn, $_GET['id']); //SQL을 주입하는 공격(sql injection)과 관련된 여러가지 기호를 문자로 바꿈
         $sql = "SELECT * FROM notice LEFT JOIN writer ON notice.writer_num = writer.num WHERE notice.id={$filtered_id}";
@@ -38,10 +38,13 @@ session_start();
         );
         echo $article['id'];
         $posting = "<table id='posting_tb'>
-            <tr><th>{$article['title']}</th></tr>
-            <tr height='100'><td>{$article['description']}</td></tr>
+            <tr>
+                <th>{$article['title']}</th>
+                <td class='post_de'>{$row['created']}</td> 
+                <td class='post_de'>작성자 : ".$article['name']."</td>                               
+            </tr>
+            <tr height='100'><td id='description'>{$article['description']}</td></tr>
             </table>
-            <div>&nbsp;&nbsp;&nbsp;작성자 : ".$article['name']."</div>
             <a href='index.php'>목록</a>
             <a href=update.php?id={$filtered_id}>수정</a>
             <form action='process_delete.php' method='post'>
@@ -72,20 +75,25 @@ if(!$_SESSION['userid']) {
 </head>
 <body>
     <header> <!--로그인 헤더-->
+        <ul class="list_hdnav"><?=$login_h?></ul> <!--로그인/회원가입-->
         <h1><a href="index.php">게시판</a></h1>
-        <nav id="list_hdnav"><ul><?=$login_h?></ul></nav>
+        <a href="create.php" class="list_hdnav">글쓰기</a>
     </header>
 
-    <?=$posting?> <!--선택한 게시글-->
-    <table id="list_tb"><tr>
-        <th>번호</th>
-        <th>제목</th>
-        <th>내용</th>
-        <th>작성자</th>
-        <th>시간</th>
-    </tr><?=$list?></table> <!--게시판 목록-->
-    <br>
-    <a href="create.php">글쓰기</a>
+    <main>
+        <table id="list_tb"><tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>작성자</th>
+            <th>시간</th>
+        </tr><?=$list?></table> <!--게시판 목록-->
+        <br>
+    </main>
+
+    <article>
+        <?=$posting?> <!--선택한 게시글-->
+    </article>
     
 </body>
 </html>

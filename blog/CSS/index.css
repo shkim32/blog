@@ -1,136 +1,90 @@
 * {
+    padding: 0;
     margin: 0;
-    padding: 0;
-}
-/* 게시판 헤드 list_head
-로그인, 회원가입, 로그아웃, 정보수정 a 테그 */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ecd5e3;
-    padding: 15px;
+    background-color: rgb(155, 187, 221);
 }
 
-header h1 a {
-    display: inline-block;
-    vertical-align: middle;
-    color: rgb(73, 73, 73);
-    margin: 10px;
-    padding: 0;
-    text-decoration: none;
-}
-
-#list_hdnav {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#list_hdnav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.hd_bt, #log_ph {
-    display: block;
-    text-align: center;
-    margin: 5px;
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(73, 73, 73);
-}
-
-.hd_bt:hover {
+a {
+    text-decoration-line: none;
     color: black;
-    background-color: #cbaacb;
 }
 
-/**/
-table {
-    border-collapse: collapse;
-    width: 100%;
-    float: left;
-    margin: 0 0 2em;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/* 게시판 목록 ( list ) */
-#list_tb th {
-    /* display: flex;
-    flex-direction: row; */
-    font-size: 1.2em;
-    text-align: left;
-}
-
-#list_tb tr {
-    border-bottom: 2px solid #ddd;
-    text-align: left;
-}
-
-.list_article {
-    padding: 0.5em 0 .5em;
-    font-weight: 400;
-    text-align: left;
-    font-size: 1.25em;
-    }
-
-#li_title {
-    padding: 0.5em 0 .5em;
-    font-weight: 400;
-    text-align: left;
-    font-size: 1.25em;
-    overflow: hidden;
+/* header */
+header {
+    padding: 10px;
+    width: 800px;
     max-width: 1000px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
+.list_hdnav {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
 
-/* 선택한 게시글 */
+.hd_bt {
+    margin-left: 10px;
+}
 
-#posting_tb{
-    margin: 30px 10px 0 10px;
+/* main */
+main {
+    background-color: white;
+
+}
+
+#list_tb {
+    background-color: white;
+    width: 750px;
+    max-width: 950px;
+}
+
+#list_tb th, #list_tb td , #list_tb a{
+    background-color: white;
+}
+
+#list_tb td {
+    border-bottom: 2px solid rgb(155, 187, 221);
+    padding: 5px;
+}
+
+/* article */
+
+#posting_tb {
+    background-color: white;
+    width: 750px;
+    max-width: 950px;
+    margin-top: 50px;
 }
 
 #posting_tb th, #posting_tb td {
-    border: 2px solid #ddd;
-    padding-left: 15px;
+    background-color: white;
+    padding: 10px;
 }
 
-#posting_tb th {
-    font-size: 1.5em;
+#posting_tb th , article h3{
+    margin-top: 10px;
+    background-color: white;
     text-align: left;
+    font-size: 30px;
+    color: gray;
 }
 
-
-
-/* 버튼 
-.btn-10 {
-    transition: all 0.3s ease;
-    overflow: hidden;
+#description {
+    text-align: left;
+    height: 600px;
+    vertical-align: top;
 }
-.btn-10:after {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-    -webkit-transform: scale(.1);
-    transform: scale(.1);
-}
-.btn-10:hover {
-    color: #fff;
-}
-.btn-10:hover:after {
-    background: #000;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-} */
 
-/* 목차- 내용 */
+.post_de {
+    font-size: 15px;
+    text-align: right;
+    vertical-align: bottom;
+    width: 160px;
+}
