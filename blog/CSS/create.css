@@ -13,3 +13,15 @@ th {
 tr {
     border-bottom: 2px solid #ddd;
 }
+
+#title {
+    width: 70%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#textarea {
+    width: 70%;
+    height: 500px;
+    font-size: 15px;
+}

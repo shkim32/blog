@@ -34,10 +34,10 @@ if(isset($_GET['id'])){
         <input type="hidden" name="id" value="<?=$filtered_id?>"> <!--왜필요하지?-->
         <table>
             <tr>               
-                <p><input type="text" name="title" placeholder="title" value="<?=$article['title']?>"></p>
+                <p><input id="title" type="text" name="title" placeholder="title" value="<?=$article['title']?>"></p>
             </tr>
             <tr>
-                <textarea name="description" id="description" placeholder="description"><?=$article['description']?></textarea>
+                <textarea name="description" id="textarea" placeholder="description"><?=$article['description']?></textarea>
             </tr>
             <p><input type="submit" value="수정완료"></p>
         </table>

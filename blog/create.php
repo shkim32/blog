@@ -19,10 +19,10 @@ session_start();
     <form action="process_create.php" method="POST">
         <table>
             <tr>               
-                <p><input type="text" name="title" placeholder="title"></p>
+                <p><input type="text" name="title" placeholder="title" id="title"></p>
             </tr>
             <tr>
-                <textarea name="description" id="description" placeholder="description"></textarea>
+                <textarea name="description" id="textarea" placeholder="description"></textarea>
             </tr>
             <p><input type="submit" value="작성완료"></p>
         </table>

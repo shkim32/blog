@@ -7,16 +7,18 @@ session_start();
 $filtered = array(
     'id'=>mysqli_real_escape_string($conn, $_POST['id']),
     'title'=>mysqli_real_escape_string($conn, $_POST['title']),
-    'description'=>mysqli_real_escape_string($conn, $_POST['description'])
+    'description'=>mysqli_real_escape_string($conn, $_POST['description']),
+    'writer'=>$_SESSION['userid']
 );
 
 $sql = "
     INSERT INTO notice
-        (title, description, created)
+        (title, description, created, writer)
         VALUES(
             '{$filtered['title']}',
             '{$filtered['description']}',
-            NOW()
+            NOW(),
+            '{$filtered['writer']}'
         )
 ";
 
@@ -28,3 +30,4 @@ if($result === false){
     echo '저장에 성공했습니다. <a href="index.php">돌아가기</a>';
 }
 ?>
+

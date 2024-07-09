@@ -47,12 +47,10 @@ session_start();
     }else{
         $userid = $row['log_id'];
         $userpw = $row['pw'];
-        $username = $row['name'];
         $userph = $row['ph'];
 
         $_SESSION['userid'] = $userid;
         $_SESSION['userpw'] = $userpw;
-        $_SESSION['username'] = $username;
         $_SESSION['userph'] = $userph;
 
         echo("<script>

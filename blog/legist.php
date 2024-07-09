@@ -20,7 +20,6 @@ session_start();
             <li>아이디<input type="text" name="log_id" id="log_id"></li>
             <li>비밀번호<input type="password" name="pw" id="pw"></li>
             <li>비밀번호 확인<input type="password" name="pw_con" id="pw_con"></li>
-            <li>이름<input type="text" name="name" id="name"></li>
             <li>핸드폰번호<input type="text" name="ph" id="ph"></li>
         </ul>
         <p><input type="submit" value="회원가입"></p>        
